@@ -7,7 +7,7 @@ body {
 	margin: 0;
 	padding: 30px;
 	font-family:  'Alice', serif;
-	font-size: 18px;
+	font-size: 20px;
 	line-height: 1.5;
 }
 
@@ -66,3 +66,106 @@ blockquote {
 	- https://www.smashingmagazine.com/2017/04/start-using-css-custom-properties/
 */
 
+article {
+  max-width: 100%;
+  display: grid;
+  grid-template-columns: 1fr 4fr 2fr;
+  column-gap: 40px;
+  
+}
+
+h1 {
+  color: var(--zelena);
+  font-size: 72px;
+  padding: 50px 0 60px 0;
+}
+
+header p {
+  margin: 0;
+}
+.meta {
+  color: var(--seda);
+}
+
+header{
+  grid-column: 2;
+  margin: 0;
+  margin-bottom: 20px;
+}
+
+p,
+h2 {
+  grid-column: 2;
+  margin: 0 0 20px 0;
+
+}
+
+h2 {
+  color: var(--zelena);
+  font-size: 64px;
+  margin: 30px 0;
+}
+
+.tip {
+  background-color: var(--svetla);
+  max-width: 100%;
+  padding: 20px;
+  align-self: start;
+}
+
+.tip a {
+  color: var(--oranzova);
+}
+.tip-vlevo {
+  grid-column: 1;
+  text-align: right;
+  border-right: 3px solid var(--zluta);
+}
+
+.tip-vpravo {
+  grid-column: 3;
+  border-left: 3px solid var(--zluta);
+
+}
+
+.tip img {
+  max-width: 100%;
+}
+
+
+figure,
+blockquote {
+  grid-column: 1/4;
+  max-width: 100%;
+  margin:20px 0;
+  color: var(--seda);
+}
+
+figure img {
+  width: 100%;
+}
+
+blockquote {
+  font-size: 48px;
+  text-align: center;
+}
+
+blockquote::before,
+blockquote::after{
+  content: "";
+  display: block;
+  width: 200px;
+  height: 3px;
+  background-color: var(--limetka);
+  margin: 30px auto;
+}
+
+footer {
+  color: var(--seda);
+  text-align: left;
+  grid-column: 2;
+}
+
+footer a {
+  color: var(--seda);
+}
